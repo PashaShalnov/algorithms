@@ -1,0 +1,12 @@
+function factorialize(num) {
+  let temp = [];
+  let fact = 1
+
+     for (let i=1; i<=num; i++) {
+     temp = [i]
+     fact *= temp
+}
+  num = fact
+  return num;
+}
+factorialize(5);
