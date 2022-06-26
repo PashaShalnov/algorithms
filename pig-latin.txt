@@ -1,0 +1,20 @@
+function translatePigLatin(str) {
+  let matcher = /[aeiou]/i;
+  let m = "";
+  console.log(str.match(matcher));
+
+  if (str.match(matcher) == null) {
+    return str + "ay";
+  }
+
+  for (let i = 0; !(str[i].match(matcher)); i++) {
+    m += str[i];
+    console.log(m);
+  }
+    if (m.length === 0) {
+     return str + "way";
+    }
+   return str.slice(m.length) + m + "ay";
+}
+
+translatePigLatin("rhythm"); 
