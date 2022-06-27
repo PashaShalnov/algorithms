@@ -1,0 +1,12 @@
+function fearNotLetter(str) {
+  let missingChar = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str.charCodeAt(i + 1) - str.charCodeAt(i) == 2) {
+      missingChar = str.charCodeAt(i) + 1;
+      let missingLetter = String.fromCharCode(missingChar)
+      return missingLetter
+    }  
+  }
+    return undefined
+}
+fearNotLetter("abce");

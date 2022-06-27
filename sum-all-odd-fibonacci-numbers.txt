@@ -1,0 +1,27 @@
+
+function sumFibs(num) {
+  let res = 0;
+  let fibonacciSequence = getFibbonacci(num);
+  if (num <= 0) return 0;
+  for (let i = 0; fibonacciSequence[i] <= num; i++) {
+      if (fibonacciSequence[i] % 2 == 1) {
+        res += fibonacciSequence[i];
+    }
+  }
+  console.log(res)
+  return res;
+}
+
+function getFibbonacci(num) {
+ let fibonacciArray = [1];
+   if (num <= 0) return 0;
+  for (let i = 1; i < num; i++) {
+    if (fibonacciArray.length == 1) {
+      fibonacciArray.push(1);
+    } 
+    fibonacciArray.push(fibonacciArray[i-1] + fibonacciArray[i]);
+  }
+  return fibonacciArray;
+}
+
+sumFibs(10);
